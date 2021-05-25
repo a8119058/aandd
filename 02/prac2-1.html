@@ -14,9 +14,11 @@
             for (var i = 1; i <= 10; i++) {
                 numbers.push(i);
             }
-            var x = numbers[1];
-            numbers[1] = numbers[3];
-            numbers[3] = x;
+            var n = Math.floor(Math.random() *10);
+            var m = Math.floor(Math.random() *10);
+            var x = numbers[n];
+            numbers[n] = numbers[m];
+            numbers[m] = x;
 
 
             //prac2-1 10個の順数（１，２，３．．．の数列）を生成し，２番目と４番目を入れ替える
