@@ -16,5 +16,12 @@ function createSequentialNumbers(array, n){
     for (var j = 1; j <= n; j++) {
         array.push(j)  
     }
+}
 
+function createRandomNumbers(array, n){
+    for (var i = 1; i <= n; i++) {
+        var k = Math.floor(Math.random() *10 +1);
+        array.push(k) ; 
+
+}
 }
