@@ -10,3 +10,11 @@ function show(array) {
     //document.getElementById('res').innerHTML = html;
     document.getElementById('res').insertAdjacentHTML('beforeend', html);
 }
+
+
+function createSequentialNumbers(array, n){
+    for (var j = 1; j <= n; j++) {
+        array.push(j)  
+    }
+
+}
