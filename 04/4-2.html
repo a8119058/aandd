@@ -13,12 +13,18 @@
             var numbers = [];
             createRandomNumbers(numbers, 5);
             show(numbers);
+            var lists = [];
 
-            if(numbers[j]>=3){
-                println('はい');
-
+            for (var j = 0; j < 5; j++) {
+                var n = numbers[j];
+                if(n >= 3){
+                    lists.push(n)
             }
-          
+   
+            }
+            
+            show(lists);
+   
         }
 
 
