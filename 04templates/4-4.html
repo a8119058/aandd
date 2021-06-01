@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../aandd.js"></script>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+
+    <script>
+        function runButtonPressed() {
+            var numbers = [];
+            createOrderedRandomNumbers(numbers, 20);
+            show(numbers);
+            var search = 25;
+            var lower = 0;
+            var upper = 19;
+           
+
+            for(var i = 0; i < numbers.length ; i++){
+                var mid = (lower + upper)/2;
+                mid = Math.floor(mid);
+                if (numbers[mid] == search){
+                    show(mid+ '番地です。');
+                    break;
+                }
+                else if(numbers[mid] > search){
+                    upper = mid ;
+
+                }
+                else if(numbers[mid] < search){
+                    lower = mid ;
+
+                }
+                if(upper<=lower+1){
+                    show('見つかりません。')
+                    break;
+                }
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>ex4-4</h1>
+    <button onclick="runButtonPressed()">run!</button>
+    <p id="res"></p>
+</body>
+
+
+</html>
