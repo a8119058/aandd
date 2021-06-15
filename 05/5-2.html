@@ -12,28 +12,29 @@
             var numbers = [];
             createRandomNumbers(numbers, 10);
             show(numbers);
-            var x ;
-           
-            for (var i = 0; i <= 10; i++) {
-                for(var j= 0; j< 9;j++)          
-                if (numbers[j ]<numbers[j + 1]){
-                             
-                }
-               console.log(numbers)          
-              }
-            show(numbers);
-        }
-            for (var a = 1; a <= 10; a++) {
-                for(var b= 1; b< 8;b++)          
-                if (numbers[b ]<numbers[b + 1]){
-                       
-                }
-               console.log(numbers)          
-              }
-            show(numbers);
-        }
-        
+            var x;
+            
+            var min_index;
+            for (var i = 0; i < 9; i++) {
+                var min = 1000 ;
 
+                for(var j= i + 1 ; j < 10; j++) {
+                    if (numbers[j] < min){
+                        min = numbers[j]  ;
+                        min_index = j ;      
+                }
+                    console.log(numbers)
+            }
+
+                    if (numbers[i] > numbers[min_index]){
+                        x = numbers[i];
+                        numbers[i]= numbers[min_index];
+                        numbers[min_index] = x;
+                    }
+                    
+                }
+                show(numbers);
+            }
     </script>
 
 </head>
