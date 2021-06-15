@@ -14,9 +14,24 @@
             show(text);
             var chars = text.split('');
             show(chars);
-            var text2 = chars.join('');
-            show(text2);
+            var chars2 = [];
+            var len = chars.length;
+            for(var i =0; i < len; i++){
+                var reverse = chars.pop();
+                chars2.push(reverse);
+          
         }
+            var text3 = chars2.join('');
+            show(text3);
+            show(chars2);
+            if(text3==text){
+                show('回文です')
+            }
+            else{
+                show('回文ではありません')
+            }
+
+    }
 
     </script>
 
