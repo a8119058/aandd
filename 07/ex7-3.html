@@ -26,14 +26,32 @@
         function runButtonPressed() {
             var word = document.getElementById('tf1').value;
             var birth = information[word];
-            document.getElementById('tf2').value = birth;
+
+            if( birth == undefined ){
+                document.getElementById('tf2').value ='見つかりませんでした';
+                
+            }
+            else{
+                document.getElementById('tf2').value = birth;
+                
+                
+
+            }
             
         }
 
         function runAbuttonPressed(){
+            
             var bi = document.getElementById('tf5').value;
             var na = information[bi];
-            document.getElementById('tf6').value = na;
+
+            if( na == undefined ){
+                document.getElementById('tf6').value='見つかりませんでした';
+                
+            }
+            else{
+                document.getElementById('tf6').value = na;
+            }
     }
      
 
