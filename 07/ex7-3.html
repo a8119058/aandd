@@ -30,11 +30,11 @@
             
         }
 
-        /*function runAbuttonPressed(){
-            var bi = document.getElementById('tf2').value;
+        function runAbuttonPressed(){
+            var bi = document.getElementById('tf5').value;
             var na = information[bi];
-            document.getElementById('tf1').value = na;
-    }*/
+            document.getElementById('tf6').value = na;
+    }
      
 
     </script>
@@ -47,11 +47,16 @@
     <br>
     誕生日：<input id="tf4" type="text" value="">
     <button onclick="registerButtonPressed()">登録!</button>
-    <h1>検索</h1>
+    <h1>名前検索</h1>
     名前：<input id="tf1" type="text" value="">
     <br>
     誕生日：<input id="tf2" type="text" value="">
-    <button onclick="runButtonPressed()">検索!(名前→誕生日)</button>
+    <button onclick="runButtonPressed()">検索!</button>
+    <h1>誕生日検索</h1>
+    誕生日：<input id="tf5" type="text" value="">
+    <br>
+    名前：<input id="tf6" type="text" value="">
+    <button onclick="runAbuttonPressed()">検索!</button>
     <p id="res"></p>
 </body>
 
