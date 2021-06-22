@@ -12,11 +12,16 @@
         var fruits = {};
 
         $().ready(function () {
-            fruits['apple'] = 'りんご';
-            fruits['orange'] = 'みかん';
+            //fruits['apple'] = 'りんご';
+            //fruits['orange'] = 'みかん';
+            registerButtonPressed();
         });
 
+
         function registerButtonPressed() {
+            var eng = document.getElementById('tf3').value;
+            var jap = document.getElementById('tf4').value;
+            fruits[eng] = jap
         }
 
         function runButtonPressed() {
