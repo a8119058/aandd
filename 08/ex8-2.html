@@ -15,7 +15,15 @@
         async function runButtonPressed() {
             var objects = await osql.connect('select * from Students;');
             document.getElementById('res').innerHTML = JSON.stringify(objects, null, '\t');
+        
+        var students = [];
+        for(i = 0;i<students.length;i++){
+            students[i] = 'name'
+
         }
+    }
+
+        
 
     </script>
 
