@@ -17,10 +17,11 @@
             document.getElementById('res').innerHTML = JSON.stringify(objects, null, '\t');
         
         var students = [];
-        for(i = 0;i<students.length;i++){
-            students[i] = 'name'
-
+        for(i = 0;i< objects.length;i++){
+            console.log(objects[i].name);
+            students.push(objects[i].name);
         }
+        document.getElementById('res').innerHTML = JSON.stringify(students,null,'\t');
     }
 
         
