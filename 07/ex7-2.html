@@ -37,6 +37,18 @@
             document.getElementById('tf1').value = en;
     }
      
+            fruits['apple'] = 'りんご';
+            fruits['orange'] = 'みかん';
+        });
+
+        function saveButtonPressed() {
+            localStorage.setItem('ObjectX', fruits);
+        }
+
+        function loadButtonPressed() {
+            var loaded = localStorage.getItem('ObjectX');
+            console.log(loaded);
+        }
 
     </script>
 
@@ -54,6 +66,9 @@
     日本語：<input id="tf2" type="text" value="">
     <button onclick="runButtonPressed()">検索!(英→日)</button>
     <button onclick="runAbuttonPressed()">検索!(日→英)</button>
+    <h1>save and load</h1>
+    <button onclick="saveButtonPressed()">save!</button>
+    <button onclick="loadButtonPressed()">load!</button>
     <p id="res"></p>
 </body>
 
